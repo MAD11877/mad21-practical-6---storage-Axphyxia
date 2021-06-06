@@ -37,6 +37,7 @@ public class ListActivity extends AppCompatActivity {
             u1.followed = randomBool();
             userList.add(u1);
             //userList.add( new User("Name " + randomNumber(), "Description " + randomNumber(), randomNumber(), randomBool()));
+            db.addUser(u1);
 
         }*/
 
