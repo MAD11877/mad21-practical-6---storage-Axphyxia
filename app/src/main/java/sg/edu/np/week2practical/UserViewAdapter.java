@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class UserViewAdapter extends RecyclerView.Adapter<UserViewHolder> {
+public class    UserViewAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     ArrayList<User> data;
     Context context;

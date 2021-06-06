@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Button Pressed!");
+                DBHandler db = new DBHandler(MainActivity.this);
+
+                db.updateUser(user1);
                 //If user has not followed
                 if (user1.followed == false) {
                     button.setText("Unfollow");

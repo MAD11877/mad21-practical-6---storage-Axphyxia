@@ -19,18 +19,26 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class ListActivity extends AppCompatActivity {
-    static ArrayList<User> userList = new ArrayList<User>();
+    static ArrayList<User> userList = new ArrayList<>();
     private final static String TAG= "List Activity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
+        DBHandler db = new DBHandler(this);
+        userList = db.getUsers();
         //Populate list with 20 user objects
-        for(int i = 0;i < 20; i++){
+        /*for(int i = 0;i < 20; i++){
+            User u1 = new User();
+            u1.name = "Name " + randomNumber();
+            u1.description = "Description " + randomNumber();
+            u1.id = i;
+            u1.followed = randomBool();
+            userList.add(u1);
+            //userList.add( new User("Name " + randomNumber(), "Description " + randomNumber(), randomNumber(), randomBool()));
 
-            userList.add( new User("Name " + randomNumber(), "Description " + randomNumber(), randomNumber(), randomBool()));
-        }
+        }*/
 
 
         RecyclerView recyclerView = findViewById(R.id.mainRecyclerView);
